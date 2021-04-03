@@ -4,7 +4,6 @@ function energy = EnergyFunc(w_all, input, lambda)
     energy = 0;
     
     for i = 1:nodes
-        %myNorm = sum(sum((input-repmat(w_all(i,:),size(input,1),1)).^2,2));
         myNorm = norm(input-repmat(w_all(i,:),size(input,1),1))^2;
         energy = energy + 1/2*myNorm.*lambda(i);
     end

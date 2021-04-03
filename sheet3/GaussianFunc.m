@@ -1,13 +1,5 @@
 function output = GaussianFunc(x, w, w_all)
 
-% A = exp(-norm(x-w).^2/2);
-% 
-% B = 0;
-% for i = 1:size(w_all,1)
-%     B = B + exp(-norm(x-w_all(i,:)).^2/2);
-% end
-% 
-% output = A./B;
     output = zeros(size(x,1), size(w_all,1));
     B = 0;
     for i = 1:size(w_all,1)
